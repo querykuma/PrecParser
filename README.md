@@ -8,7 +8,7 @@ https://querykuma.github.io/PrecParser
 
 ## 文法規則
 
-factor:  NUMBER | "(" expression ")"
+factor:  NUMBER | "(" expression ")"<br>
 expression:  factor | factor (+|-|*|/|^|**) factor
 
 ## 演算子の優先順位
