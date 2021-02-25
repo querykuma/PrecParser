@@ -6,20 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>数式の構文解析</title>
   <script src="main.js"></script>
+  <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-  <h1>Operator Precedence Parsing</h1>
-  <p>
-  <h2>数式入力してOKを押すと構文解析して出力します</h2>
-  <textarea id="textarea" rows="10" cols="100" wrap="hard" autofocus>-10 - (3+6)*(2-5)**-2 + 3**2**2</textarea><br>
-  <input id="button_input" type="button" value="OK">
-  </p>
-  <p>
-  <h2>出力</h2>
-  <textarea id="output" rows="10" cols="100" wrap="hard" disabled></textarea><br>
-  <input id="button_clear" type="button" value="Clear">
-  </p>
+  <div class="topbar">
+    <div class="topnav width">
+      <a class="toplink" href="https://github.com/querykuma/PrecParser" title="View projects on GitHub">
+        <span class="fab fa-github icon"></span>GitHub
+      </a>
+      <a class="toplink" href="https://querykuma.github.io/" title="View Query Kuma page">
+        <span class="fas fa-cube icon"></span>開発日誌
+      </a>
+    </div>
+  </div>
+
+  <div class="card width">
+    <h1>Operator Precedence Parsing</h1>
+    <p>
+    <h2>数式入力してOKを押すと構文解析して出力します</h2>
+    <textarea id="textarea" rows="10" cols="80" wrap="hard" autofocus>-10 - (3+6)*(2-5)**-2 + 3**2**2</textarea><br>
+    <input id="button_input" type="button" value="OK">
+    </p>
+    <p>
+    <h2>出力</h2>
+    <textarea id="output" rows="10" cols="80" wrap="hard" disabled style="background-color:#efefef;"></textarea><br>
+    </p>
+  </div>
+
 </body>
 
 </html>

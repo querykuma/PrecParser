@@ -406,7 +406,6 @@ class Main {
     this.output = document.getElementById("output");
 
     this.button_input.addEventListener("click", () => this.button_input_click());
-    this.button_clear.addEventListener("click", () => this.button_clear_click());
 
   }
 
@@ -436,12 +435,6 @@ class Main {
       this.output.textContent += error + "\n";
 
     }
-
-  }
-
-  button_clear_click() {
-
-    this.output.textContent = "";
 
   }
 
