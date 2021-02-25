@@ -35,6 +35,8 @@ class Evaluator {
           return left * right;
         case '/':
           return left / right;
+        case '%':
+          return left % right;
         case '**':
         case '^':
           return left ** right;
@@ -163,7 +165,7 @@ class Lexer {
 
     for (; ;) {
 
-      let m = text.match(/^\s*(\+|-|\*{1,2}|\/|\^|[\d.]+|\(|\))\s*(.*)$/su);
+      let m = text.match(/^\s*(\+|-|\*{1,2}|\/|%|\^|[\d.]+|\(|\))\s*(.*)$/su);
 
       if (!m) {
 
@@ -379,6 +381,7 @@ class PrecParser {
     this.add_operator('-', 1, true);
     this.add_operator('*', 2, true);
     this.add_operator('/', 2, true);
+    this.add_operator('%', 2, true);
     this.add_operator('^', 3, false);
     this.add_operator('**', 3, false);
 
